@@ -1,0 +1,293 @@
+@font-face {
+    font-family: 'Chinese Rocks';
+    src: url('font/chinese rocks rg.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Kirsty';
+    src: url('font/Kirsty Rg.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Kirsty';
+    src: url('font/Kirsty Rg It.otf') format('opentype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Kirsty';
+    src: url('font/Kirsty Bd.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Kirsty';
+    src: url('font/Kirsty Bd It.otf') format('opentype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+/* Classe para usar a fonte Chinese Rocks */
+.chinese-rocks-font {
+    font-family: 'Chinese Rocks', Arial, sans-serif;
+}
+
+/* Classe para usar a fonte Kirsty */
+.kirsty-font {
+    font-family: 'Kirsty', Arial, sans-serif;
+}
+
+/* Classe para usar a fonte Kirsty em negrito */
+.kirsty-bold {
+    font-family: 'Kirsty', Arial, sans-serif;
+    font-weight: bold;
+}
+
+/* Classe para usar a fonte Kirsty em itálico */
+.kirsty-italic {
+    font-family: 'Kirsty', Arial, sans-serif;
+    font-style: italic;
+}
+
+/* Cores personalizadas para o texto da navbar */
+.cancela-text {
+    color: #ffffff; /* Azul - você pode mudar para a cor que quiser */
+}
+
+.navbar-brand {
+    font-size: 2.8rem;
+    
+}
+
+.nav-link {
+    color: #ffffff;
+}
+
+.nav-item {
+    font-size: 1.1rem;
+    padding-left: 2rem;
+}
+
+.nav-link:hover {
+    color: #D41936; /* Vermelho - você pode mudar para a cor que quiser */
+}
+
+.cpf-text {
+    color: #D41936; /* Vermelho - você pode mudar para a cor que quiser */
+}
+
+.bg-body-tertiary {
+    background-color: #000009 !important; /* Cor de fundo cinza claro */
+}
+
+.btn-danger {
+    background-color: #D41936;
+}
+
+.sup {
+    color: #000009
+}
+
+.sup:hover {
+    color: #ffffff; /* Branco - você pode mudar para a cor que quiser */
+    background-color: #D41936;
+    transition: color 1s;
+}
+
+/* Background da imagem hero */
+.bg-hero {
+    background-image: url('img/background.png');
+    background-size: cover;
+    background-position: center right; /* Posiciona personagem à direita */
+    background-repeat: no-repeat;
+    height: 100vh; /* Altura exata da tela */
+    max-height: 100vh; /* Não exceder a altura da tela */
+    display: flex;
+    align-items: center; /* Centraliza verticalmente para melhor equilíbrio */
+    padding-top: 0; /* Remove padding superior */
+    position: relative;
+    overflow: hidden; /* Remove qualquer conteúdo que ultrapasse */
+}
+
+/* Overlay escuro para melhor legibilidade do texto */
+.bg-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Overlay escuro transparente */
+    z-index: 1;
+}
+
+.bg-hero .container {
+    position: relative;
+    z-index: 2; /* Coloca o texto acima do overlay */
+    max-width: 100%; /* Use toda a largura disponível */
+    padding-left: 2rem; /* Controla distância da borda esquerda */
+}
+
+/* Alinhamento do conteúdo hero com a navbar */
+.hero-content {
+    margin-left: 0; /* Remove margem para ficar mais à esquerda */
+    padding-left: 0; /* Remove padding também */
+    max-width: 45%; /* Limita largura para dar espaço ao personagem */
+}
+
+/* Remove barra de rolagem da página */
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Remove barra de rolagem */
+    height: 100vh; /* Altura exata da tela */
+}
+
+/* Variação: Texto no terço inferior */
+.bg-hero.bottom-text {
+    align-items: flex-end;
+    padding-bottom: 10vh;
+}
+
+/* Variação: Texto centralizado vertical e horizontalmente */
+.bg-hero.center-text {
+    align-items: center;
+    text-align: center;
+}
+
+.bg-hero.center-text .hero-content {
+    text-align: center;
+    margin: 0 auto;
+}
+
+/* Variação: Texto no canto superior esquerdo */
+.bg-hero.top-left {
+    align-items: flex-start;
+    padding-top: 15vh;
+}
+
+/* Media Queries para Responsividade */
+
+/* Telas muito grandes (1400px+) */
+@media (min-width: 1400px) {
+    .bg-hero {
+        background-position: center right;
+    }
+    
+    .bg-hero .container {
+        max-width: 1320px;
+        margin: 0 auto;
+    }
+    
+    .hero-content {
+        max-width: 500px;
+        margin-left: 3rem;
+    }
+    
+    .navbar-brand {
+        font-size: 3.2rem;
+    }
+}
+
+/* Telas grandes (1200px - 1399px) */
+@media (min-width: 1200px) and (max-width: 1399px) {
+    .bg-hero {
+        background-position: center right;
+    }
+    
+    .hero-content {
+        max-width: 450px;
+        margin-left: 2rem;
+    }
+}
+
+/* Tablets em landscape (992px - 1199px) */
+@media (min-width: 992px) and (max-width: 1199px) {
+    .bg-hero {
+        background-position: center right;
+    }
+    
+    .hero-content {
+        max-width: 400px;
+        margin-left: 1.5rem;
+    }
+    
+    .navbar-brand {
+        font-size: 2.4rem;
+    }
+}
+
+/* Tablets em portrait (768px - 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+    .bg-hero {
+        background-position: center right;
+        align-items: center;
+        padding-top: 0;
+    }
+    
+    .hero-content {
+        text-align: left;
+        margin: 0;
+        max-width: 60%;
+        margin-left: 1rem;
+    }
+    
+    .navbar-brand {
+        font-size: 2.2rem;
+    }
+    
+    h1.display-2 {
+        font-size: 2.2rem !important;
+    }
+}
+
+/* Smartphones (até 767px) */
+@media (max-width: 767px) {
+    .bg-hero {
+        background-position: center;
+        align-items: flex-start;
+        padding-top: 100px;
+    }
+    
+    .bg-hero .container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    
+    .hero-content {
+        text-align: center;
+        margin: 0;
+        padding: 0 1rem;
+        max-width: 100%;
+    }
+    
+    .navbar-brand {
+        font-size: 1.8rem;
+    }
+    
+    h1.display-2 {
+        font-size: 2rem !important;
+        line-height: 1.2;
+    }
+    
+    .kirsty-font.fs-5 {
+        font-size: 1rem !important;
+    }
+    
+    .btn-lg {
+        padding: 0.75rem 1.5rem;
+        font-size: 1rem;
+    }
+    
+    .nav-item {
+        font-size: 1rem;
+        padding-left: 1rem;
+    }
+}
+
