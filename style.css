@@ -116,6 +116,7 @@
 }
 
 /* Overlay escuro para melhor legibilidade do texto */
+
 .bg-hero::before {
     content: '';
     position: absolute;
@@ -123,22 +124,27 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.5); /* Overlay escuro transparente */
+    background: rgba(0, 0, 0, 0.1); /* Overlay escuro transparente  */
     z-index: 1;
 }
+
 
 .bg-hero .container {
     position: relative;
     z-index: 2; /* Coloca o texto acima do overlay */
-    max-width: 100%; /* Use toda a largura disponível */
-    padding-left: 2rem; /* Controla distância da borda esquerda */
+    max-width: 1200px; /* Largura máxima centralizada */
+    margin: 0 auto; /* Centraliza o container */
+    padding-left: 2rem;
+    padding-right: 2rem;
 }
 
 /* Alinhamento do conteúdo hero com a navbar */
 .hero-content {
     margin-left: 0; /* Remove margem para ficar mais à esquerda */
     padding-left: 0; /* Remove padding também */
-    max-width: 45%; /* Limita largura para dar espaço ao personagem */
+    max-width: 500px; /* Largura fixa para o texto */
+    position: relative;
+    left: -50px; /* Move o texto mais para a esquerda */
 }
 
 /* Remove barra de rolagem da página */
@@ -187,7 +193,7 @@ body {
     
     .hero-content {
         max-width: 500px;
-        margin-left: 3rem;
+        left: -80px; /* Mais à esquerda em telas grandes */
     }
     
     .navbar-brand {
@@ -203,7 +209,7 @@ body {
     
     .hero-content {
         max-width: 450px;
-        margin-left: 2rem;
+        left: -60px; /* Ajuste para telas grandes */
     }
 }
 
@@ -215,7 +221,7 @@ body {
     
     .hero-content {
         max-width: 400px;
-        margin-left: 1.5rem;
+        left: -40px; /* Ajuste para tablets landscape */
     }
     
     .navbar-brand {
@@ -235,7 +241,7 @@ body {
         text-align: left;
         margin: 0;
         max-width: 60%;
-        margin-left: 1rem;
+        left: -20px; /* Ajuste menor para tablets */
     }
     
     .navbar-brand {
@@ -258,6 +264,7 @@ body {
     .bg-hero .container {
         padding-left: 1rem;
         padding-right: 1rem;
+        max-width: 100%;
     }
     
     .hero-content {
@@ -265,6 +272,8 @@ body {
         margin: 0;
         padding: 0 1rem;
         max-width: 100%;
+        left: 0; /* Remove deslocamento em mobile */
+        position: static; /* Remove position relative em mobile */
     }
     
     .navbar-brand {
@@ -291,3 +300,15 @@ body {
     }
 }
 
+.text-danger {
+    color: #D41936 !important;
+}
+
+.btn-black {
+    background-color: #000009;
+}
+
+.btn-black:hover {
+    background-color: #000000; /* Preto - você pode mudar para a cor que quiser */
+    color: #D41936; /* Vermelho - você pode mudar para a cor que quiser */
+}
